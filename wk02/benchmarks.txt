@@ -1,0 +1,9 @@
+Sort by the second benchmark, then the first (3rd and 2nd column)
+> sort -k3,3 -k2,2 benchmarks 
+
+Sort by 4th benchmark, and benchmark number (numerically)
+// ensures numeric values by starting the sorting from the 8th character (the first number)
+> sort -k4,4 -k1.8,1n benchmarks
+
+Removes leading zeroes from the benchmark stats
+> sed -e 's/\t0/\t/g' benchmarks // deletion like `sed -e '/\t0/d' benchmarks` can't be used because it will delete the whole line

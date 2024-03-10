@@ -1,0 +1,13 @@
+tr <set1> <set2>
+- translates characters in set 1 to corresponding characters in set 2
+- if set 1 is longer than set 2, extras will use the last value of set 2
+
+tr -d ' ' | wc -w
+- deletes all spaces, feeds this to wc for word count
+- results in line count
+
+tr -cs '[:alpha:]' '\n' | wc -l
+- replaces all sets of alphabetical characters with a new line (repeats squeezed),
+  then feeds this into wc to count lines
+
+

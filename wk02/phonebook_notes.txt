@@ -1,0 +1,12 @@
+Options:
+
+-t - specify the field separator
+-k - select keys to sort between/from
+
+Fields (These are not real details):
+1 2 3          4            5
+J A Shepherd   Botany       9665-4321
+
+This assumes that surnames (or suburbs) aren't single letters when altering the fields
+
+sed -e "s/(([A-Z]) )/\2./g" phonebook

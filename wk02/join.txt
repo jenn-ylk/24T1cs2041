@@ -1,0 +1,21 @@
+Each of the input files were pre-sorted with `sort csXXXX.txt > csXXXX_sorted.txt`, join to work properly (sorted input)
+
+
+Join the texts to contain ID, 1511 mark, 2041 mark
+
+> join -t'|' -1 1 -2 1 cs1511_sorted.txt cs2041_sorted.txt
+
+
+Allow for default "--" value if a student doesn't have a mark
+
+`-a` allows for printing the unpaired lines, -e specifies what to replace empty content with, -o auto applies auto formatting on output line
+
+> join -t'|' -a1 -a2 -o auto -e"--" cs1511_sorted.txt cs2041_sorted.txt
+
+
+Join and sort by 1511 marks, in ascending order
+> join -t'|' cs1511_sorted.txt cs2041_sorted.txt | sort -t'|' -k2,2
+
+
+Join and sort by 2041 marks, in descending order
+> join -t'|' cs1511_sorted.txt cs2041_sorted.txt | sort -t'|' -k3,3 -r

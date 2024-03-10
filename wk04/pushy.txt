@@ -1,0 +1,10 @@
+Tests:
+- don't test whether .pushy folder matches (matching this folder isn't required behaviour)
+
+Things you might like to test:
+- output
+- exit/return values
+- file system structure (particularly with rm, checkout and merge)
+
+Ways to more quickly test correct output and values:
+- scripts to compare same commands on both yours and reference

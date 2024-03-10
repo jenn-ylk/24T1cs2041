@@ -1,0 +1,3 @@
+acc <zid> | grep -E "COMP[0-9]{4}t[1-3]_Student" | sed -E "s/.*(COMP[0-9]{4}).*/\1/"
+
+^ This may not function correctly for summer term students, or if a new term system is introduced
