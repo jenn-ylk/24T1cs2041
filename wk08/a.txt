@@ -1,0 +1,5 @@
+cat
+rat
+rabbit
+mat
+paper
